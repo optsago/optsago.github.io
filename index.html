@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>ООптСаго</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/media.css" />
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lora:Regular" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                loop:true, //Зацикливаем слайдер
+                margin:50, //Отступ от элемента справа в 50px
+                dots: true,
+                nav : true,
+                navText : ["",""],
+                autoplay:true, //Автозапуск слайдера
+                smartSpeed:1000, //Время движения слайда
+                autoplayTimeout:7000, //Время смены слайда
+                responsive:{ //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:1
+                    },
+                    1000:{
+                        items:1
+                    }
+                }
+            });
+        });
+  </script>
+
+  <script type="text/javascript">
+     $(document).ready(function(){
+        $(".fb1").on("click",".podrobneesago", function (event) {
+            event.preventDefault();
+            $(".podrsago").fadeIn("slow");
+            var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1000);
+        });
+        $('.close1').click(function(e){
+                e.preventDefault();
+                $(".podrsago").fadeOut(500);
+        });
+        $(".fb2").on("click",".podrobneekrahmal", function (event) {
+            event.preventDefault();
+            $(".podrkrahmal").fadeIn("slow");
+            var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1000);
+        });
+        $('.close2').click(function(e){
+                e.preventDefault();
+                $(".podrkrahmal").fadeOut(500);
+        });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="header980">
+        <div class="header__logo">
+          <a href="/"><img src="images/logo.jpg"></a>
+        </div>
+      <nav class="menu">
+        <ul class="menu__header">
+          <li><a>Наша продукция</a></li>
+          <li><a>Стать партнером</a></li>
+          <li><a>Доставка</a></li>
+          <li><a>Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="first">
+    <div class="first__title">наша продукция</div>
+    <div class="first__underline underline1"></div>
+    <div class="first__foto tovar1 left">
+    </div>
+    <div class="first__text right">
+      <div class="first__text_title">саго</div>
+      Наша компания — <span>один из крупнейших<br>производителей саго в России!</span><br>Саго представляет собой крупу, <br>которую изготавливают из картофельного <br>или кукурузного крахмала. <br>Вы можете приобрести нашу продукцию <br>оптом или в розницу, расфасованную<br>в удобных для Вас объемах<br>
+      <div class="first__text_bottom fb1">
+        <a href="#sago" class="left podrobneesago">Подробнее о саго</a>
+        <button class="right">оставить заявку</button>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="podrsago" id="sago">
+    <div class="first__text_title">Полезные свойства саго</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Полезные свойства саго в первую очередь зависят от того, как оно было произведено. В состав натурального продукта входит клетчатка, которая <span>помогает очищать кишечник от шлаков и токсинов.</span> Саго может похвастаться наличием практически всех минералов, которые необходимы для нормального функционирования организма. Есть в нем разные витамины . Преимущество этой крупы заключается в <span>полном отсутствии глютена</span>, который вызывает у многих людей аллергию. Именно поэтому рекомендуется употреблять саго людям с целиакией (заболевание, провоцирующее сильную аллергию).<br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Этот продукт обладает обволакивающим свойством, что позволяет употреблять его в качестве <span>профилактики от болезней ЖКТ.</span> Саго является прекрасным источником энергии. Многие врачи рекомендуют включить кашу из него в лечебную диету и при истощении. Помогает саго и улучшить аппетит. Содержит этот продукт много холина, который обеспечивает защиту клеточных мембран и улучшает процесс усвоения жира. Еще это вещество благоприятно сказывается на  работе нервной системы.
+<a class="close1">Закрыть</a></div>
+    <div class="clear"></div>
+    <div class="margin80"></div>
+    <div class="first__text left">
+      <div class="first__text_title text_left">крахмал картофельный</div>
+      Также Вы можете приобрести у нас<br>картофельный крахмал отличного<br>качества по самым низким ценам!<br>
+Просто оставьте заявку и мы перезвоним<br>Вам в ближайшее  время.
+      <div class="first__text_bottom fb2">
+        <a href="#krahmal" class="left podrobneekrahmal">Подробнее о крахмале</a>
+        <button class="right">оставить заявку</button>
+      </div>
+    </div>
+    <div class="first__foto tovar2 right">
+    </div>
+    <div class="clear"></div>
+    <div class="margin80"></div>
+    <div class="podrkrahmal" id="krahmal">
+    <div class="first__text_title">Полезные свойства крахмала</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Польза крахмала заключается в его благоприятном действии на организм. <span>Продукт понижает количество холестерина в печени и сыворотки в крови.</span> В состав картофельного крахмала входит большое количество калия , который способствует выведению жидкости из организма, а также минерал положительно сказывается на работе сердечно-сосудистой системы. Крахмал является одним из главных поставщиков энергии для человека. Продукт обладает смягчающим и обволакивающим эффектом, поэтому его полезно употреблять при наличии проблем с ЖКТ. Картофельный крахмал народные целители рекомендуют употреблять при наличии ожогов, неврозов и других кожных заболеваний.
+<a class="close2">Закрыть</a></div>
+    <div class="first__underline underline2"></div>
+    <div class="first__title" style="margin-top: -50px;">с нами уже работают</div>
+    <div class="partners">
+      <div class="partner__blok"><img src="images/partner1.png"></div>
+      <div class="partner__blok"><img src="images/partner2.png"></div>
+      <div class="partner__blok"><img src="images/partner3.png"></div>
+    </div>
+  </div>
+  <div class="otzyvy">
+      <div class="otzyvy__title">отзывы</div>
+      <div class="owl-carousel">
+        <div class="item">
+          <img src="images/man.png">
+          <div class="otzyvy__name">Раиль Шарипов</div>
+          <div class="otzyvy__text">Hendrerit te hendrerit in volutpat minim commodo amet duis blandit odio, duis autem magna nulla duis, at ipsum esse molestie vero iusto nulla</div>
+        </div>
+        <div class="item">
+          <img src="images/man.png">
+          <div class="otzyvy__name">Раиль Шарипов</div>
+          <div class="otzyvy__text">Hendrerit te hendrerit in volutpat minim commodo amet duis blandit odio, duis autem magna nulla duis, at ipsum esse molestie vero iusto nulla</div>
+        </div>
+        <div class="item">
+          <img src="images/man.png">
+          <div class="otzyvy__name">Раиль Шарипов</div>
+          <div class="otzyvy__text">Hendrerit te hendrerit in volutpat minim commodo amet duis blandit odio, duis autem magna nulla duis, at ipsum esse molestie vero iusto nulla</div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
