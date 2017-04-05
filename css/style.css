@@ -134,6 +134,9 @@ header{
 .underline2{
 	width: 800px;
 }
+.underline3{
+  width: 880px;
+}
 .first__foto{
 	width: 342px;
 	height: 342px;
@@ -141,7 +144,7 @@ header{
 	background-position-y: -1px;
 	background-repeat: no-repeat;
 	border-radius: 171px;
-	border: 2px solid #000;
+	border: 2px solid #806a95;
 }
 .tovar1{
 	background-image: url('../images/sago.png');
@@ -446,4 +449,134 @@ header{
   right: 100px;
   top: 200px;
   z-index: 10;
+}
+.form_block{
+  width: 880px;
+  margin: 50px auto;
+  overflow: hidden;
+  padding: 0 30px;
+}
+#name,#phone{
+  float: left;
+  width: 300px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #999999;
+  padding: 22px 0;
+  font-size: 21px;
+  font-family: SourceSansProRegular;
+  color: rgb(217, 210, 210);
+}
+#name{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 0;
+}
+
+#phone{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+*:focus {outline: none;}
+#phone:focus,#name:focus {
+  box-shadow: 0 0 3px 1px #999999 inset;
+  -webkit-box-shadow:0 0 3px 1px #999999 inset ;
+  -moz-box-shadow: 0 0 3px 1px #999999 inset;
+  -ms-box-shadow: 0 0 3px 1px #999999 inset;
+  -o-box-shadow: 0 0 3px 1px #999999 inset;
+  color: #000;
+}
+#phone:focus{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#name:focus{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 0;
+}
+#btn{
+  background-color: #64e664;
+  width: 240px;
+  height: 73px;
+  border: 0;
+  margin-left: 36px;
+  font-size: 21px;
+  font-family: SourceSansProRegular;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.pr_block{
+  width: 920px;
+  margin: 50px auto;
+  overflow: hidden;
+  padding: 0 30px;
+}
+.pr_blocki{
+  float: left;
+  height: auto;
+  width: 270px;
+  text-align: center;
+  margin: 30px 0;
+}
+.margin-center{
+  margin: 30px 55px;
+}
+.pr_blocki_text{
+  background-color: #64e664;
+  padding: 15px 0;
+  font-size: 20px;
+  font-family: CocoGothicLight;
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 40px;
+  letter-spacing: 1.2px;
+}
+.calc_block{
+  width: 100%;
+  height: 700px;
+  background: url('../images/calc-fon.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.calc980{
+  width: 960px;
+  padding: 0 10px;
+  margin: 0 auto;
+  height: 700px;
+}
+.calc_title {
+  width: 100%;
+  font-size: 35px;
+  font-family: CocoGothicLight;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-align: left;
+  -moz-transform: matrix( 1.09787736025146,0,0,1.00083039181999,0,0);
+  -webkit-transform: matrix( 1.09787736025146,0,0,1.00083039181999,0,0);
+  -ms-transform: matrix( 1.09787736025146,0,0,1.00083039181999,0,0);
+  padding: 80px 0 0 45px;
+}
+.calc_rect {
+  background-color: rgba(255, 255, 255,0.749);
+  width: 308px;
+  padding: 10px;
+  font-size: 19px;
+  font-family: SourceSansProRegular;
+  color: rgb(0, 0, 0);
+  line-height: 1.474;
+  text-align: center;
+  margin: 60px 0 0;
+  letter-spacing: 1.2px;
+}
+.calc_title2 {
+  font-size: 23px;
+  font-family: CocoGothicLight;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.478;
+  padding: 30px 0;
+  text-align: left;
 }
