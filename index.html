@@ -10,6 +10,8 @@
 	<![endif]-->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/media.css" />
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/hover-min.css">
   <link rel="stylesheet" href="css/owl.carousel.css" />
   <link href="https://fonts.googleapis.com/css?family=Lora:Regular" rel="stylesheet">
 	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -17,34 +19,81 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/maskedinput.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script>
+       new WOW().init();
+     </script>
+  <script type="text/javascript">
+   $(document).ready(function(){
+      $("#menu__header").on("click","a", function (event) {
+          event.preventDefault();
+          var id  = $(this).attr('href'),
+              top = $(id).offset().top - 10;
+          $('body,html').animate({scrollTop: top}, 1500);
+      });
+  });
+  </script>
+  <script type="text/javascript">
+  ymaps.ready(init);
+   
+  function init(){     
+   
+      var myMap;
+   
+      myMap = new ymaps.Map("map", {
+          center: [55.4085265236446,49.56129399999995],
+          zoom: 15,
+          controls: []
+      });
+   
+      myMap.behaviors.disable('scrollZoom');
+      myMap.behaviors.disable('drag');
+      myMap.controls.add('geolocationControl');
+      myMap.controls.add('zoomControl');
+      myMap.controls.add('routeEditor');
+      myMap.controls.add('trafficControl');
+       
+      var myPlacemark0 = new ymaps.Placemark([55.4085265236446,49.56129399999995], { // Создаем метку с такими координатами и суем в переменную
+          balloonContent: 'ООптСаго, г.Лаишево, ул.Толстого, 13.' // сдесь содержимое балуна в формате html, все стили в css
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'http://blog.karmanov.ws/files/APIYaMaps1/min_marker.png',
+            iconImageSize: [40, 51],
+            iconImageOffset: [-20, -47]
+      });
+      myMap.geoObjects.add(myPlacemark0);
+   }
+  </script>
+
 </head>
 <body>
   <header>
     <div class="header980">
         <div class="header__logo">
-          <a href="/"><img src="images/logo.jpg"></a>
+          <a href="/" class="hvr-backward"><img src="images/logo.jpg" class="wow bounceInDown"></a>
         </div>
       <nav class="menu">
-        <ul class="menu__header">
-          <li><a>Наша продукция</a></li>
-          <li><a>Стать партнером</a></li>
-          <li><a>Доставка</a></li>
-          <li><a>Контакты</a></li>
+        <ul class="menu__header" id="menu__header">
+          <li class="wow bounceInDown"><a href="#products">Наша продукция</a></li>
+          <li class="wow bounceInDown"><a href="#stat_partnerom">Стать партнером</a></li>
+          <li class="wow bounceInDown"><a href="#dostavka">Доставка</a></li>
+          <li class="wow bounceInDown"><a href="#map">Контакты</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <div class="first">
-    <div class="first__title">наша продукция</div>
+  <div class="first" id="products">
+    <div class="first__title wow bounceInLeft" data-wow-delay="1s" data-wow-duration="1s">наша продукция</div>
     <div class="first__underline underline1"></div>
-    <div class="first__foto tovar1 left">
+    <div class="first__foto tovar1 left wow flipInX center hvr-border-fade">
     </div>
-    <div class="first__text right">
+    <div class="first__text right wow bounceInRight" data-wow-delay="1s" data-wow-duration="1s">
       <div class="first__text_title">саго</div>
       Наша компания — <span>один из крупнейших<br>производителей саго в России!</span><br>Саго представляет собой крупу, <br>которую изготавливают из картофельного <br>или кукурузного крахмала. <br>Вы можете приобрести нашу продукцию <br>оптом или в розницу, расфасованную<br>в удобных для Вас объемах<br>
       <div class="first__text_bottom fb1">
         <a href="#sago" class="left podrobneesago">Подробнее о саго</a>
-        <button class="right">оставить заявку</button>
+        <button class="right wow tada hvr-bounce-to-right">оставить заявку</button>
       </div>
     </div>
     <div class="clear"></div>
@@ -55,16 +104,16 @@
 <a class="close1">Закрыть</a></div>
     <div class="clear"></div>
     <div class="margin80"></div>
-    <div class="first__text left">
-      <div class="first__text_title text_left">крахмал кукурузный</div>
+    <div class="first__text left wow bounceInRight" data-wow-delay="1s" data-wow-duration="1s">
+      <div class="first__text_title text_left wow bounceInLeft">крахмал кукурузный</div>
       Также Вы можете приобрести у нас<br>кукурузный крахмал отличного<br>качества по самым низким ценам!<br>
 Просто оставьте заявку и мы перезвоним<br>Вам в ближайшее  время.
       <div class="first__text_bottom fb2">
         <a href="#krahmal" class="left podrobneekrahmal">Подробнее о крахмале</a>
-        <button class="right">оставить заявку</button>
+        <button class="right wow tada hvr-bounce-to-right">оставить заявку</button>
       </div>
     </div>
-    <div class="first__foto tovar2 right">
+    <div class="first__foto tovar2 right span3 wow rollIn center hvr-border-fade">
     </div>
     <div class="clear"></div>
     <div class="margin80"></div>
@@ -72,22 +121,22 @@
     <div class="first__text_title">Полезные свойства крахмала</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Польза крахмала заключается в его благоприятном действии на организм. <span>Продукт понижает количество холестерина в печени и сыворотки в крови.</span> В состав картофельного крахмала входит большое количество калия , который способствует выведению жидкости из организма, а также минерал положительно сказывается на работе сердечно-сосудистой системы. Крахмал является одним из главных поставщиков энергии для человека. Продукт обладает смягчающим и обволакивающим эффектом, поэтому его полезно употреблять при наличии проблем с ЖКТ. Картофельный крахмал народные целители рекомендуют употреблять при наличии ожогов, неврозов и других кожных заболеваний.
 <a class="close2">Закрыть</a></div>
     <div class="first__underline underline2"></div>
-    <div class="first__title" style="margin-top: -50px;">с нами уже работают</div>
+    <div class="first__title wow bounceInDown center" style="margin-top: -50px;">с нами уже работают</div>
     <div class="partners">
-      <div class="partner__blok"><img src="images/partner1.png"></div>
-      <div class="partner__blok"><img src="images/partner2.png"></div>
-      <div class="partner__blok"><img src="images/partner3.png"></div>
+      <div class="partner__blok hvr-float-shadow"><img src="images/partner1.png" class="wow rollIn center" data-wow-delay="1s" data-wow-duration="1s"></div>
+      <div class="partner__blok hvr-float-shadow"><img src="images/partner2.png" class="wow rollIn center" data-wow-delay="1s" data-wow-duration="1s"></div>
+      <div class="partner__blok hvr-float-shadow"><img src="images/partner3.png" class="wow rollIn center" data-wow-delay="1s" data-wow-duration="1s"></div>
     </div>
   </div>
   <div class="otzyvy">
-      <div class="otzyvy__title">отзывы</div>
+      <div class="otzyvy__title wow bounceInRight center">отзывы</div>
       <div class="owl-carousel">
         <div class="item">
           <img src="images/man.png">
           <div class="otzyvy__name">Раиль Шарипов</div>
           <div class="otzyvy__text">Hendrerit te hendrerit in volutpat minim commodo amet duis blandit odio, duis autem magna nulla duis, at ipsum esse molestie vero iusto nulla</div>
         </div>
-        <div class="item">
+        <div class="item wow">
           <img src="images/man.png">
           <div class="otzyvy__name">Раиль Шарипов</div>
           <div class="otzyvy__text">Hendrerit te hendrerit in volutpat minim commodo amet duis blandit odio, duis autem magna nulla duis, at ipsum esse molestie vero iusto nulla</div>
@@ -99,7 +148,7 @@
         </div>
       </div>
   </div>
-  <div class="form_block">
+  <div class="form_block wow bounceInLeft center" id="stat_partnerom">
       <form method="post">
           <input type="text" name="name" id="name" placeholder="Ваше имя">
           <input type="tel" name="phone" id="phone" placeholder="+7 (___) ___-__-__">
@@ -107,51 +156,114 @@
       </form>
   </div>
   <div class="first__underline underline3"></div>
-  <div class="first__title" style="margin-top: -50px;">почему выбирают нас</div>
+  <div class="first__title wow rollIn center" style="margin-top: -50px;">почему выбирают нас</div>
   <div class="pr_block">
-      <div class="pr_blocki">
-        <img src="images/pr1.png">
+      <div class="pr_blocki wow zoomIn" data-wow-delay="0.5s">
+        <img src="images/pr1.png" class="hvr-grow">
         <div class="pr_blocki_text">Мы производим<br>продукцию только<br>самого высокого<br>качества</div>
       </div>
-      <div class="pr_blocki margin-center">
-        <img src="images/pr2.png">
+      <div class="pr_blocki margin-center wow zoomIn" data-wow-delay="0.75s">
+        <img src="images/pr2.png" class="hvr-grow">
         <div class="pr_blocki_text">Мы оперативно<br>отвечаем на любые<br>вопросы наших<br> клиентов</div>
       </div>
-      <div class="pr_blocki">
-        <img src="images/pr3.png">
+      <div class="pr_blocki wow zoomIn" data-wow-delay="1s">
+        <img src="images/pr3.png" class="hvr-grow">
         <div class="pr_blocki_text">Нашим сайтом<br>удобно пользоваться<br>с любого<br>устройства</div>
       </div>
-      <div class="pr_blocki">
-        <img src="images/pr4.png">
+      <div class="pr_blocki wow zoomIn" data-wow-delay="0.5s">
+        <img src="images/pr4.png" class="hvr-grow">
         <div class="pr_blocki_text">Мы ценим своих<br>клиентов и всегда<br>выполняем все свои<br>гарантии</div>
       </div>
-      <div class="pr_blocki margin-center">
-        <img src="images/pr5.png">
+      <div class="pr_blocki margin-center wow zoomIn" data-wow-delay="0.75s">
+        <img src="images/pr5.png" class="hvr-grow">
         <div class="pr_blocki_text">Быстрая<br>доставка — одно<br>из главных наших<br>преимуществ</div>
       </div>
-      <div class="pr_blocki">
-        <img src="images/pr6.png">
+      <div class="pr_blocki wow zoomIn" data-wow-delay="1s">
+        <img src="images/pr6.png" class="hvr-grow">
         <div class="pr_blocki_text">Простая<br>и удобная<br>форма заявки,<br> покупки</div>
       </div>
-      <div class="pr_blocki">
-        <img src="images/pr7.png">
+      <div class="pr_blocki wow zoomIn" data-wow-delay="0.5s">
+        <img src="images/pr7.png" class="hvr-grow">
         <div class="pr_blocki_text">Мы работаем<br>по наличному и<br>безналичному<br>расчету</div>
       </div>
-      <div class="pr_blocki margin-center">
-        <img src="images/pr8.png">
+      <div class="pr_blocki margin-center wow zoomIn" data-wow-delay="0.75s">
+        <img src="images/pr8.png" class="hvr-grow">
         <div class="pr_blocki_text">С нами очень<br>легко связаться<br>или назначить<br>встречу</div>
       </div>
-      <div class="pr_blocki">
-        <img src="images/pr9.png">
+      <div class="pr_blocki wow zoomIn" data-wow-delay="1s">
+        <img src="images/pr9.png" class="hvr-grow">
         <div class="pr_blocki_text">У нас<br>имеется<br>пункт для<br>самовывоза</div>
       </div>
   </div>
-  <div class="calc_block">
+  <div class="calc_block wow zoomIn" id="dostavka" data-wow-delay="0.3s">
     <div class="calc980">
         <div class="calc_title">доставка саго</div>
         <div class="calc_rect">Наша компания осуществляет<br>доставку по всему Татарстану<br>и в соседние регионы.<br>Точную сумму доставки Вы<br>можете рассчитать с помощью<br>специального калькулятора</div>
         <div class="calc_title2">Калькулятор расчета<br>стоимости доставки</div>
     </div>
   </div>
+  <div class="map" id="map">
+    <div class="map-content-over">
+      <div class="map-content wow rollIn left">
+        <div class="map-content-title">самовывоз</div>
+        <div class="table">
+          <div class="inner">
+            <img src="images/c1.png">
+            <span>г.Лаишево, ул.Толстого, 13</span>
+          </div>
+        </div>
+        <div class="table">
+          <div class="inner">
+            <img src="images/c2.png">
+            <span>+7 (917) 917-58-65</span>
+          </div> 
+        </div>
+        <div class="table">
+          <div class="inner">
+            <img src="images/c3.png">
+            <span>ildar@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="svyaz">
+    <div class="svyaz-content">
+      <div class="svyaz-content-title wow fadeInDown">связь с нами</div>
+      <div class="underline-svyaz"></div>
+      <div class="svyaz-content-blocks-wrapper">
+        <div class="svyaz-content-bloki wow tada">
+          <img src="images/z1.png" class="hvr-pulse-shrink">
+          <div class="svyaz-content-title ts">адрес</div>
+          <div class="underline-svyaz tu"></div>
+          <div class="svyaz-content-bloki-text">
+            422610, РТ, Лаишево<br>
+            ул. Толстого, дом 13
+          </div>
+        </div>
+        <div class="svyaz-content-bloki wow tada">
+          <img src="images/z2.png" class="hvr-pulse-shrink">
+          <div class="svyaz-content-title ts">время работы</div>
+          <div class="underline-svyaz tu"></div>
+          <div class="svyaz-content-bloki-text">
+            8:00 - 17:00<br>
+            БЕЗ ВЫХОДНЫХ
+          </div>
+        </div>
+        <div class="svyaz-content-bloki wow tada">
+          <img src="images/z3.png" class="hvr-pulse-shrink">
+          <div class="svyaz-content-title ts">контакты</div>
+          <div class="underline-svyaz tu"></div>
+          <div class="svyaz-content-bloki-text">
+            Телефон: +7 (917) 917-58-65<br>
+            Email: ildar@gmail.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content"><span>2017</span><span>Все права защищены "ОптСаго"</span><span>Сайт сделан веб-студией <a href="http://stepupweb.ru" target="_blank">Step Up</a></span></div>
+  </footer>
 </body>
 </html>
