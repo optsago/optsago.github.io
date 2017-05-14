@@ -70,7 +70,6 @@ header{
 }
 .header980{
 	width: 980px;
-	padding: 20px 0 10px;
 	overflow:hidden;
 	margin: 0 auto;
 }
@@ -89,7 +88,7 @@ header{
 }
 .menu__header li{
 	float: left;
-	padding: 10px 15px;
+	padding: 25px 15px 0;
 }
 .menu__header li:first-child{
 	padding-left: 50px;
@@ -422,45 +421,64 @@ header{
   border: 6px solid #fff;
   z-index: 11;
 }
-.owl-carousel .owl-dots{
-  text-align: center;
-  width: 80px;
-  margin: -120px auto;
+.owl-carousel .owl-dots {
+    text-align: center;
+    width: 102px;
+    height: 20px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -51px;
+    top: 395px;
+    z-index: 10;
 }
 .owl-carousel .owl-dot span{
-    border-radius: 7px;
-    width: 14px;
-    height: 14px;
+    border-radius: 10px;
+    width: 16px;
+    height: 16px;
     float: left;
-    margin: 25px 5px 20px;
-    background-color: #fff
+    margin: 10px 5px 0;
+    background-color: transparent;
+    border: 2px solid #fff;
 }
 .owl-carousel .owl-dot.active span{
-    background-color: #64e664 !important;
-    border-radius: 7px;
-    width: 14px;
-    height: 14px;
-    float: left;
-    margin: 25px 5px 5px;
+    border-radius: 13px;
+    width: 22px;
+    height: 22px;
+    margin: 7px 5px 0;
+    background-color: #fff !important;
+    border: 2px solid #fff;
 }
 .owl-carousel .owl-nav .owl-prev{
-  width: 11px;
-  height: 18px;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
   background-image: url(../images/prev.png);
   position: absolute;
-  left: 100px;
+  border-radius: 18px;
+  background-position: top 2px left 2px;
+  border: 2px solid #fff;
+  position: absolute;
+  left: 50%;
   top: 200px;
+  margin-left: -340px;
+  border: 2px solid #fff;
   z-index: 10;
 }
 .owl-carousel .owl-nav {
   width: 11px;
 }
 .owl-carousel .owl-nav .owl-next{
-  width: 11px;
-  height: 18px;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
   background-image: url(../images/next.png);
   position: absolute;
-  right: 100px;
+  border-radius: 18px;
+  background-position: top 2px left 2px;
+  border: 2px solid #fff;
+  right: 50%;
+  margin-right: -340px;
   top: 200px;
   z-index: 10;
 }
@@ -768,6 +786,9 @@ footer{
     font: bold 28px/34px Arial, Helvetica, sans-serif;
     z-index: 210;
 }
+.close:hover{
+  color: #78cccc;
+}
 .contact-title{
   font-size: 30px;
   font-family: SourceSansProBold;
@@ -836,4 +857,8 @@ footer{
   -ms-transition: 0.7s;
   -o-transition: 0.7s;
   transition: 0.7s;
+}
+#zakazat:hover{
+  background-color: #78cccc;
+  color: #fff;
 }
