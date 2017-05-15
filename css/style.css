@@ -862,3 +862,55 @@ footer{
   background-color: #78cccc;
   color: #fff;
 }
+#kuda{
+  width: 250px;
+  height: 45px;
+  padding-left: 15px;
+  font-size: 21px;
+  font-family: SourceSansProRegular;
+  color: rgb(0, 0, 0);
+  border: 0;
+  text-overflow: ellipsis;
+}
+.ves{
+  overflow: hidden;
+}
+#ves{
+  width: 180px;
+  height: 45px;
+  margin-top: 10px;
+  padding-left: 15px;
+  font-size: 21px;
+  font-family: SourceSansProRegular;
+  color: rgb(0, 0, 0);
+  border: 0;
+  float: left;
+}
+.rasschet{
+  width: 68px;
+  height: 47px;
+  border: 0;
+  background-image: url(../images/calc-button.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.map-content-calc{
+  padding: 30px 30px 25px;
+  background-color: rgba(89,210,90,0.5);
+  height: auto;
+  position: absolute;
+  top: 70px;
+  left: 100px;
+  display: none;
+  z-index: 10;
+}
+.map-content-title-calc{
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: SourceSansProLight;
+  color: #000;
+  padding-bottom: 10px;
+  text-align: center;
+}
