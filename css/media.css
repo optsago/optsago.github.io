@@ -14,8 +14,10 @@ html,body{
     height: 45px;
     border: 0;
     background-color: transparent;
-    border: 1px solid #f0f;
+    border: 0;
     cursor: pointer;
+    -webkit-filter: invert(100%);
+	filter: invert(100%);
 }
 .header980{
 	width: calc(100% - 10px);
@@ -44,7 +46,7 @@ html,body{
 	display: none;
 }
 .menu_header{
-	margin-top: calc((100vh - 172px)/2);
+	margin-top: 100px;
 }
 .menu__header li{
 	float: none;
@@ -94,6 +96,9 @@ html,body{
 .right{
 	float: none;
 	margin: 0 auto;
+}
+.podrkrahmal,.podrsago {
+	text-align: center;
 }
 .first__text{
 	width: calc(100% - 10px);
