@@ -254,6 +254,7 @@ html,body{
     width: calc(100% - 10px);
     margin-left: 0;
     z-index: 111111111111111;
+    position:absolute;
 }
 .contact-title {
     font-size: 22px;
