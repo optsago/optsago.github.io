@@ -249,7 +249,9 @@ html,body{
 	display: block;
 }
 .modal-window {
-    top: 5px;
+    top: 0;
+    bottom: 0;
+    overflow-y:scroll;
     left: 5px;
     width: calc(100% - 10px);
     margin-left: 0;
