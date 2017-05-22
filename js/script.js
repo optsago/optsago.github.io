@@ -43,6 +43,11 @@ $(document).ready(function() {
                 e.preventDefault();
                 $(".podrkrahmal").fadeOut(500);
         });
+        $('.close-mob').click(function(e){
+                e.preventDefault();
+                $(".menu").fadeOut(500);
+                $(".close-mob").fadeOut(500);
+        });
         $("#phone").mask("+7 (999) 999-99-99");
         $("#telephone").mask("+7 (999) 999-99-99");
         $("#time").mask("99 : 99");
