@@ -199,6 +199,10 @@ html,body{
 	text-align: center;
 	padding: 10px 0;
 }
+#calc-bottom {
+    text-align: center;
+    padding: 10px 0;
+}
 #kuda {
     margin: 0 auto;
 }
@@ -242,5 +246,51 @@ html,body{
 }
 .footer-bottom span{
 	display: block;
+}
+.modal-window {
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    margin-left: 0;
+    z-index: 111111111111111;
+}
+.contact-title {
+    font-size: 22px;
+    padding: 10px 0;
+}
+#form {
+    padding: 5px;
+}
+#form label {
+    font-size: 18px;
+    text-align: center;
+    display: block;
+}
+.contact-input input {
+    width: 300px;
+    height: 46px;
+    margin: 5px 0;
+    font-size: 22px;
+}
+.contact-input {
+    width: 317px;
+}
+#date {
+    width: 300px;
+    float: none;
+    border-right: 1px solid #000;
+}
+#time {
+    border-left: 1px solid #000;
+    width: 300px;
+    float: none;
+    margin-top: 5px;
+}
+.modal-window2{
+  top:5px;
+  width: 300px;
+  height: auto;
+  margin-left: -150px;
+  padding:10px;
 }
 }
