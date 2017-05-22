@@ -38,17 +38,18 @@
   });
    window.onscroll = function() {
       if ($(window).scrollTop() > 50) {
-        $(".menu-mob").css({"-webkit-filter" : "invert(0%)"});
-        $(".menu-mob").css({"filter" : "invert(0%)"});
+        $(".mob-menu").css({"-webkit-filter" : "invert(0)"});
+        $(".mob-menu").css({"filter" : "invert(0)"});
       }
       else{
-        $(".menu-mob").css({"-webkit-filter" : "invert(100%)"});
-        $(".menu-mob").css({"filter" : "invert(100%)"});
-      }
+        $(".mob-menu").css({"-webkit-filter" : "invert(100%)"});
+        $(".mob-menu").css({"filter" : "invert(100%)"});
+    }
   </script>
   <script type="text/javascript">
     function rasskryt() {
         $("#menu__header").on("click","a", function (event) {
+          event.preventDefault();
           $(".menu").css({"display" : "none"});
       });
       var display = $(".menu").css('display');
@@ -188,6 +189,8 @@
 <a class="close1">Закрыть</a></div>
     <div class="clear"></div>
     <div class="margin80"></div>
+    <div class="first__foto tovar2 right wow zoomIn mob-only" data-wow-delay="1s">
+    </div>
     <div class="first__text left">
       <div class="first__text_title text_left wow zoomIn" data-wow-delay="0.4s">крахмал кукурузный</div>
       Также Вы можете приобрести у нас<br>кукурузный крахмал отличного<br>качества по самым низким ценам!<br>
@@ -197,7 +200,7 @@
         <button class="right" id="zayavka2">оставить заявку</button>
       </div>
     </div>
-    <div class="first__foto tovar2 right wow zoomIn" data-wow-delay="1s">
+    <div class="first__foto tovar2 right wow zoomIn desktop-only" data-wow-delay="1s">
     </div>
     <div class="clear"></div>
     <div class="margin80"></div>
