@@ -202,6 +202,7 @@ html,body{
 #calc-bottom {
     text-align: center;
     padding: 10px 0;
+    display:block;
 }
 #kuda {
     margin: 0 auto;
