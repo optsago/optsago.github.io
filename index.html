@@ -52,6 +52,7 @@
         $("#menu__header").on("click","a", function (event) {
           event.preventDefault();
           $(".menu").css({"display" : "none"});
+          $(".close-mob").css({"display" : "none"});
       });
       var display = $(".menu").css('display');
       if(display=='none')
