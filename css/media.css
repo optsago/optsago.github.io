@@ -19,6 +19,12 @@ html,body{
     -webkit-filter: invert(100%);
 	filter: invert(100%);
 }
+.mob-only{
+  display: block;
+}
+.desktop-only{
+  display: none;
+}
 .header980{
 	width: calc(100% - 10px);
 	width: -webkit-calc(100% - 10px);

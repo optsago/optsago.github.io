@@ -832,6 +832,12 @@ footer{
     z-index: 100000001;
     display: none;
 }
+.mob-only{
+  display: none;
+}
+.desktop-only{
+  display: block;
+}
 .contact-title{
   font-size: 30px;
   font-family: SourceSansProBold;
