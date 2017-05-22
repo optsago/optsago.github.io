@@ -51,6 +51,16 @@
         $(".close-mob").css({"display" : "none"});
       }
      }
+     window.onscroll = function() {
+      if ($(window).scrollTop() > 50) {
+        $(".menu-mob").css({"-webkit-filter" : "invert(0%)"});
+        $(".menu-mob").css({"filter" : "invert(0%)"});
+      }
+      else{
+        $(".menu-mob").css({"-webkit-filter" : "invert(100%)"});
+        $(".menu-mob").css({"filter" : "invert(100%)"});
+      }
+    }
   </script>
   <script type="text/javascript">
         $(function(){
@@ -155,16 +165,16 @@
     <div class="close-mob">X</div>
   </header>
   <div class="first" id="products">
-    <div class="first__title wow zoomIn" data-wow-delay="1.2s" data-wow-duration="1.2s">наша продукция</div>
+    <div class="first__title wow zoomIn" data-wow-delay="1s" data-wow-duration="1s">наша продукция</div>
     <div class="first__underline underline1"></div>
-    <div class="first__foto tovar1 left wow zoomIn" data-wow-delay="1.4s">
+    <div class="first__foto tovar1 left wow zoomIn" data-wow-delay="1s">
     </div>
-    <div class="first__text right wow zoomIn" data-wow-delay="1.6s" data-wow-duration="1.6s">
+    <div class="first__text right wow zoomIn" data-wow-delay="1s" data-wow-duration="1s">
       <div class="first__text_title">саго</div>
       Наша компания — <span>один из крупнейших<br>производителей саго в России!</span><br>Саго представляет собой крупу, <br>которую изготавливают из картофельного <br>или кукурузного крахмала. <br>Вы можете приобрести нашу продукцию <br>оптом или в розницу, расфасованную<br>в удобных для Вас объемах<br>
       <div class="first__text_bottom fb1">
         <a href="#sago" class="left podrobneesago">Подробнее о саго</a>
-        <button class="right wow zommIn" id="zayavka" data-wow-delay="1.8s">оставить заявку</button>
+        <button class="right wow zommIn" id="zayavka" data-wow-delay="1s">оставить заявку</button>
       </div>
     </div>
     <div class="clear"></div>
@@ -184,7 +194,7 @@
         <button class="right" id="zayavka2">оставить заявку</button>
       </div>
     </div>
-    <div class="first__foto tovar2 right wow zoomIn" data-wow-delay="1.3s">
+    <div class="first__foto tovar2 right wow zoomIn" data-wow-delay="1s">
     </div>
     <div class="clear"></div>
     <div class="margin80"></div>
