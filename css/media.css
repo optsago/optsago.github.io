@@ -18,6 +18,7 @@ html,body{
     cursor: pointer;
     -webkit-filter: invert(100%);
 	filter: invert(100%);
+	z-index: 1000000;
 }
 .mob-only{
   display: block;
