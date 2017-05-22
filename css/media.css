@@ -267,22 +267,22 @@ html,body{
     display: block;
 }
 .contact-input input {
-    width: 300px;
+    width: 250px;
     height: 46px;
     margin: 5px 0;
     font-size: 22px;
 }
 .contact-input {
-    width: 317px;
+    width: 267px;
 }
 #date {
-    width: 300px;
+    width: 250px;
     float: none;
     border-right: 1px solid #000;
 }
 #time {
     border-left: 1px solid #000;
-    width: 300px;
+    width: 250px;
     float: none;
     margin-top: 5px;
 }
