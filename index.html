@@ -29,13 +29,28 @@
   </script>
   <script type="text/javascript">
    $(document).ready(function(){
-      $("#menu__header,.ves").on("click","a", function (event) {
+      $("#menu__header,.ves,#menu__footer").on("click","a", function (event) {
           event.preventDefault();
           var id  = $(this).attr('href'),
               top = $(id).offset().top - 10;
           $('body,html').animate({scrollTop: top}, 1500);
       });
   });
+  </script>
+  <script type="text/javascript">
+    function rasskryt() {
+      var display = $(".menu").css('display');
+      if(display=='none')
+      {
+        $(".menu").css({"display" : "block"});
+        $(".close-mob").css({"display" : "block"});
+      }
+      else
+      {
+        $(".menu").css({"display" : "none"});
+        $(".close-mob").css({"display" : "none"});
+      }
+     }
   </script>
   <script type="text/javascript">
         $(function(){
@@ -82,6 +97,7 @@
    });
   function rasschet(){
         var kuda=$('#kuda').val();
+        var vess=parseInt($('#ves').val());
         ymaps.route(["г.Лаишево, ул.Толстого, 13." , kuda], { mapStateAutoApply: true }).then(
           function(route) {
                       if (maproute) {
@@ -89,7 +105,10 @@
                       }
                       myMap.geoObjects.add(route);
                       maproute=route;
-                      $('.map-content-title-calc').html("Стоимость Вашей перевозки составит "+Math.floor(route.getLength()*30/1000)+" руб.");
+                      if(vess<=5000)
+                        $('.map-content-title-calc').html("Стоимость Вашей перевозки составит <span>"+Math.floor(route.getLength()*15/1000)+"</span> руб.");
+                      else
+                        $('.map-content-title-calc').html("Стоимость Вашей перевозки составит <span>"+Math.floor(route.getLength()*20/1000)+"</span> руб.");
                       $('.map-content-calc').css({"display" : "block"});
           },
           function(error) {
@@ -132,6 +151,8 @@
         </ul>
       </nav>
     </div>
+    <button class="mob-menu" onclick="rasskryt()"></button>
+    <div class="close-mob">X</div>
   </header>
   <div class="first" id="products">
     <div class="first__title wow zoomIn" data-wow-delay="1.2s" data-wow-duration="1.2s">наша продукция</div>
@@ -168,14 +189,14 @@
     <div class="clear"></div>
     <div class="margin80"></div>
     <div class="podrkrahmal" id="krahmal">
-    <div class="first__text_title">Полезные свойства крахмала</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Польза крахмала заключается в его благоприятном действии на организм. <span>Продукт понижает количество холестерина в печени и сыворотки в крови.</span> В состав картофельного крахмала входит большое количество калия , который способствует выведению жидкости из организма, а также минерал положительно сказывается на работе сердечно-сосудистой системы. Крахмал является одним из главных поставщиков энергии для человека. Продукт обладает смягчающим и обволакивающим эффектом, поэтому его полезно употреблять при наличии проблем с ЖКТ. Картофельный крахмал народные целители рекомендуют употреблять при наличии ожогов, неврозов и других кожных заболеваний.
+    <div class="first__text_title">Полезные свойства крахмала</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Польза крахмала заключается в его благоприятном действии на организм. <span>Продукт понижает количество холестерина в печени и сыворотки в крови.</span> В состав кукурузного крахмала входит большое количество калия , который способствует выведению жидкости из организма, а также минерал положительно сказывается на работе сердечно-сосудистой системы. Крахмал является одним из главных поставщиков энергии для человека. Продукт обладает смягчающим и обволакивающим эффектом, поэтому его полезно употреблять при наличии проблем с ЖКТ. Кукурузный крахмал народные целители рекомендуют употреблять при наличии ожогов, неврозов и других кожных заболеваний.
 <a class="close2">Закрыть</a></div>
     <div class="first__underline underline2"></div>
     <div class="first__title wow zoomIn" style="margin-top: -50px;" data-wow-delay="0.4s">с нами уже работают</div>
     <div class="partners">
       <div class="partner__blok hvr-float-shadow"><a href="http://xn--80aaatifeowgsgj9byd.xn--p1ai/" target="_blank"><img src="images/partner1.png" class="wow zoomIn" data-wow-delay="0.6s" data-wow-duration="0.6s"></a></div>
       <div class="partner__blok hvr-float-shadow"><a href="https://www.svezhar.ru/" target="_blank"><img src="images/partner2.png" class="wow zoomIn" data-wow-delay="0.8s" data-wow-duration="0.8s"></a></div>
-      <div class="partner__blok hvr-float-shadow"><a href="http://xn--80aaatifeowgsgj9byd.xn--p1ai/" target="_blank"><img src="images/partner3.png" class="wow zoomIn" data-wow-delay="1s" data-wow-duration="1s"></a></div>
+      <div class="partner__blok hvr-float-shadow"><a href="https://2gis.ru/kazan/firm/2956015536478306?queryState=center%2F49.103988%2C55.754393%2Fzoom%2F17" target="_blank"><img src="images/partner3.png" class="wow zoomIn" data-wow-delay="1s" data-wow-duration="1s"></a></div>
     </div>
   </div>
   <div class="otzyvy">
@@ -249,12 +270,13 @@
     <div class="calc980">
         <div class="calc_title wow zoomIn" data-wow-delay="1s">доставка саго</div>
         <div class="calc_rect wow zoomIn" data-wow-delay="1.3s">Наша компания осуществляет<br>доставку по всему Татарстану<br>и в соседние регионы.<br>Точную сумму доставки Вы<br>можете рассчитать с помощью<br>специального калькулятора</div>
-        <div class="calc_title2 wow zoomIn" data-wow-delay="1.5s">Калькулятор расчета<br>стоимости доставки</div>
-        <input type="text" name="kuda" id="kuda" placeholder="Куда" class="wow zoomIn" data-wow-delay="1.8s">
+        <div class="calc_title2 wow zoomIn" data-wow-delay="1.5s">Калькулятор расчета<br>стоимости доставки*</div>
+        <div class="kudaa"><input type="text" name="kuda" id="kuda" placeholder="Куда" class="wow zoomIn" data-wow-delay="1.8s"></div>
         <div class="ves">
-          <input type="text" name="ves" id="ves" placeholder="Вес" class="wow zoomIn" data-wow-delay="1.8s">
+          <input type="text" name="ves" id="ves" placeholder="Вес, кг" class="wow zoomIn" data-wow-delay="1.8s">
           <a href="#map"><button class="rasschet wow zoomIn" data-wow-delay="1.8s" onclick="rasschet();"></button></a>
         </div>
+        <span id="calc-bottom">*Примерная стоимость. Может отличаться от фактической.</span>
     </div>
   </div>
   <div class="map wow zoomIn" data-wow-delay="0.5s" id="map">
@@ -321,18 +343,22 @@
     </div>
   </div>
   <footer class="wow zoomIn">
-    <div class="header980">
+    <div class="header980 footer_m">
         <div class="header__logo">
           <a href="/" class="hvr-backward wow zoomIn" data-wow-delay="0.2s"><img src="images/logo_footer.png"></a>
         </div>
       <nav class="menu">
-        <ul class="menu__header" id="menu__header">
+        <ul class="menu__footer" id="menu__footer">
           <li class="wow zoomIn" data-wow-delay="0.4s"><a href="#products">Наша продукция</a></li>
           <li class="wow zoomIn" data-wow-delay="0.6s"><a href="#stat_partnerom">Стать партнером</a></li>
           <li class="wow zoomIn" data-wow-delay="0.8s"><a href="#dostavka">Доставка</a></li>
           <li class="wow zoomIn" data-wow-delay="1s"><a href="#map">Контакты</a></li>
         </ul>
       </nav>
+    </div>
+    <div class="footer-bottom">
+        <span>2017 Все права защищены. </span>
+        <span>Сайт разработан <a href="http://stepupweb.ru" target="_blank">Step up</a></span>
     </div>
   </footer>
 </body>
