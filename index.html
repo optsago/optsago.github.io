@@ -36,9 +36,21 @@
           $('body,html').animate({scrollTop: top}, 1500);
       });
   });
+   window.onscroll = function() {
+      if ($(window).scrollTop() > 50) {
+        $(".menu-mob").css({"-webkit-filter" : "invert(0%)"});
+        $(".menu-mob").css({"filter" : "invert(0%)"});
+      }
+      else{
+        $(".menu-mob").css({"-webkit-filter" : "invert(100%)"});
+        $(".menu-mob").css({"filter" : "invert(100%)"});
+      }
   </script>
   <script type="text/javascript">
     function rasskryt() {
+        $("#menu__header").on("click","a", function (event) {
+          $(".menu").css({"display" : "none"});
+      });
       var display = $(".menu").css('display');
       if(display=='none')
       {
@@ -51,15 +63,6 @@
         $(".close-mob").css({"display" : "none"});
       }
      }
-     window.onscroll = function() {
-      if ($(window).scrollTop() > 50) {
-        $(".menu-mob").css({"-webkit-filter" : "invert(0%)"});
-        $(".menu-mob").css({"filter" : "invert(0%)"});
-      }
-      else{
-        $(".menu-mob").css({"-webkit-filter" : "invert(100%)"});
-        $(".menu-mob").css({"filter" : "invert(100%)"});
-      }
     }
   </script>
   <script type="text/javascript">
