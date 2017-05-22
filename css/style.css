@@ -115,6 +115,7 @@ header{
 .menu__footer{
   list-style: none;
   overflow: hidden;
+  padding-top: 15px;
 }
 .menu__footer li{
   float: left;
